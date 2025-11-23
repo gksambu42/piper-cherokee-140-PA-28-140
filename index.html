@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Piper PA-28-140/180 Checklist</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#004080">
+  <style>
+    @page { size: landscape; }
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; color: #222; }
+    h1 { text-align: center; color: #004080; }
+    details { margin: 10px 0; border: 2px solid #ccc; border-radius: 6px; padding: 8px; background: #fff; }
+    summary { font-weight: bold; cursor: pointer; font-size: 1.2em; }
+    .checklist-item { transition: opacity 0.5s ease, color 0.5s ease; }
+    .checklist-item.checked { opacity: 0.4; color: #888; text-decoration: line-through; }
+    .checklist-item input[type="checkbox"] { margin-right: 8px; }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+    .column { background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #ddd; }
+    body.dark-mode { background: #121212; color: #e0e0e0; }
+    body.dark-mode h1 { color: #80c0ff; }
+    body.dark-mode details { background: #1e1e1e; border-color: #444; }
+    body.dark-mode summary { color: #80c0ff; }
+    body.dark-mode .column { background: #1e1e1e; border-color: #444; }
+    #darkModeToggle, #resetAll { padding: 6px 12px; border-radius: 6px; cursor: pointer; border: none; margin: 5px; }
+    #darkModeToggle { background: #004080; color: #fff; }
+    #resetAll { background: #B00020; color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Piper PA-28-140/180 Cockpit Checklist</h1>
+  <div style="text-align:center; margin:10px;">
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+    <button id="resetAll">🔄 Reset All</button>
+  </div>
+  <p style="text-align:center;">
+    Tail Number: <b>N4546R</b> | Emergency Freq: <b>121.5 (Guard)</b> | Transponder: <b>7700</b> | Best Glide: <b>80 MPH</b>
+  </p>
 
+  <details open>
+    <summary>📋 Checklist</summary>
+    <div class="columns">
+      <!-- Left Column -->
+      <div class="column">
+        <h3>✅ Start / Run-Up</h3>
+        <ul>
+          <li class="checklist-item"><input type="checkbox"> Brakes Hold</li>
+          <li class="checklist-item"><input type="checkbox"> Mixture Rich</li>
+          <li class="checklist-item"><input type="checkbox"> Throttle 1/4"</li>
+          <li class="checklist-item"><input type="checkbox"> Master ON</li>
+          <li class="checklist-item"><input type="checkbox"> Beacon ON</li>
+          <li class="checklist-item"><input type="checkbox"> Prime As Required</li>
+          <li class="checklist-item"><input type="checkbox"> Ignition START</li>
+          <li class="checklist-item"><input type="checkbox"> Oil Pressure CHECK</li>
+          <li class="checklist-item"><input type="checkbox"> Controls FREE</li>
+          <li class="checklist-item"><input type="checkbox"> Fuel Selector TANK</li>
+          <li class="checklist-item"><input type="checkbox"> Trim SET</li>
+          <li class="checklist-item"><input type="checkbox"> Throttle 2000 RPM</li>
+          <li class="checklist-item"><input type="checkbox"> Mag CHECK</li>
+          <li class="checklist-item"><input type="checkbox"> Carb Heat CHECK</li>
+          <li class="checklist-item"><input type="checkbox"> Gauges CHECK</li>
+        </ul>
+
+        <h3>✅ Takeoff / Climb</h3>
+        <ul>
+          <li class="checklist-item"><input type="checkbox"> Flaps UP</li>
+          <li class="checklist-item"><input type="checkbox"> Carb Heat OFF</li>
+          <li class="checklist-item"><input type="checkbox"> Throttle FULL</li>
+          <li class="checklist-item"><input type="checkbox"> Rotate 55 MPH</li>
+          <li class="checklist-item"><input type="checkbox"> Climb 85 MPH</li>
+        </ul>
+
+        <h3>✅ Cruise / Descent</h3>
+        <ul>
+          <li class="checklist-item"><input type="checkbox"> Power SET</li>
+          <li class="checklist-item"><input type="checkbox"> Mixture LEAN</li>
+          <li class="checklist-item"><input type="checkbox"> Gauges CHECK</li>
+          <li class="checklist-item"><input type="checkbox"> Fuel CHECK</li>
+          <li class="checklist-item"><input type="checkbox"> Fuel Proper TANK</li>
+          <li class="checklist-item"><input type="checkbox"> Mixture RICH</li>
+          <li class="checklist-item"><input type="checkbox"> Carb Heat ON</li>
+          <li class="checklist-item"><input type="checkbox"> Radios SET</li>
+          <li class="checklist-item"><input type="checkbox"> Altimeter SET</li>
+        </ul>
+
+        <h3>✅ Landing / Shutdown</h3>
+        <ul>
+          <li class="checklist-item"><input type="checkbox"> Fuel Proper TANK</li>
+          <li class="checklist-item"><input type="checkbox"> Mixture RICH</li>
+          <li class="checklist-item"><input type="checkbox"> Carb Heat ON</li>
+          <li class="checklist-item"><input type="checkbox"> Seatbelts SECURE</li>
+          <li class="checklist-item"><input type="checkbox"> Final 75 MPH</li>
+          <li class="checklist-item"><input type="checkbox"> Mains FIRST</li>
+          <li class="checklist-item"><input type="checkbox"> Flaps UP</li>
+          <li class="checklist-item"><input type="checkbox"> Lights OFF</li>
+          <li class="checklist-item"><input type="checkbox"> Trim SET</li>
+          <li class="checklist-item"><input type="checkbox"> Avionics OFF</li>
+          <li class="checklist-item"><input type="checkbox"> Mixture CUTOFF</li>
+          <li class="checklist-item"><input type="checkbox"> Ignition OFF</li>
+          <li class="checklist-item"><input type="checkbox"> Master OFF</li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="column">
+        <h3>⚠️ Emergencies</h3>
+        <ul>
+          <li class="checklist-item"><input type="checkbox"> Power Loss After Takeoff → Glide 80 MPH</li>
+          <li class="checklist-item"><input type="checkbox"> Power Loss In Flight → Fuel ON, Mixture Rich, Carb Heat ON</li>
+          <li class="checklist-item"><input type="checkbox"> Fires (Engine/Electrical/Ground) → Follow fire procedures</li>
+          <li class="checklist-item"><input type="checkbox"> Smoke/Fumes in Cabin → Master OFF, Vents OPEN</li>
+          <li class="checklist-item"><input type="checkbox"> Engine Roughness / Carb Ice → Carb Heat ON, Switch Tanks</li>
+          <li class="checklist-item"><input type="checkbox"> Loss of Oil Pressure / High Temp → Reduce Throttle, Land ASAP</li>
+          <li class="checklist-item"><input type="checkbox"> Alternator / Electrical Loss → Reduce Load, Land ASAP</li>
+          <li class="checklist-item"><input type="checkbox"> Other Emergencies → Icing, Spin Recovery, Emergency Descent</li>
+        </ul>
+
+        <h3>📊 Reference Speeds</h3>
+        <ul>
+          <li><b>Takeoff / Landing:</b></li>
+          <li>Rotate: 55 MPH</li>
+          <li>Final Approach: 75 MPH</li>
+          <li>Stall (Clean): 55 MPH</li>
+          <li>Stall (Dirty): 49 MPH</
